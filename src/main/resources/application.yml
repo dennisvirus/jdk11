@@ -11,3 +11,22 @@ spring:
     platform: h2
     url: jdbc:h2:mem:springboot
     driver-class-name: org.h2.Driver
+
+
+
+    hibernate:
+      ddl-auto: create
+
+  jpa:
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
+
+
+mybatis:
+  type-aliases-package: com.dennisvirus.springboot.mapper
+
+
+  mapper-locations: mapper/**/*.xml
