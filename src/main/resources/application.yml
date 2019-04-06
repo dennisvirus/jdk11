@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: local
+
+---
+
+spring:
+  profiles: local
+
+  datasource:
+    platform: h2
+    url: jdbc:h2:mem:springboot
+    driver-class-name: org.h2.Driver
