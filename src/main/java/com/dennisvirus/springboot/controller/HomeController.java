@@ -22,7 +22,7 @@ public class HomeController {
     public Map<String, String> getJsonValue(@PathVariable("value") String value) {
         Map<String, String> map = new HashMap<>();
         map.put("name", value);
-        map.put("age", "2222");
+        map.put("age", "22");
         return map;
     }
 
