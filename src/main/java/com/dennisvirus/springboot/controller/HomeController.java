@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,5 +31,12 @@ public class HomeController {
     public Country getTableValue(@PathVariable("name") String name) {
 
         return homeService.getTableData(name);
+
     }
+
+    public static Comparator<String> reverse(Comparator<String> comp) {
+        return (x, y) -> comp.compare(y, x);
+    }
+
+
 }
